@@ -1,6 +1,8 @@
 // src/components/Navbar.jsx
 
 import Link from "next/link";
+import logo from "../../public/logo.png"
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -8,7 +10,9 @@ const Navbar = () => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         
         {/* Logo */}
-        <h1 className="text-xl font-bold">MyApp</h1>
+        <Link href={'/'} className="text-xl font-bold">
+<Image width={50} height={10} src="/logo.png" alt="" className="w-[50px]"/>
+        </Link>
 
         {/* Menu */}
         <ul className="hidden md:flex gap-6">
@@ -23,7 +27,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/foods" className="hover:text-gray-300">
+            <Link prefetch={false} href="/foods" className="hover:text-gray-300">
               Foods
             </Link>
           </li>

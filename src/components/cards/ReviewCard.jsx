@@ -1,14 +1,23 @@
+import Image from "next/image";
+
 const ReviewCard = ({ review }) => {
   return (
     <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-lg transition">
       
       {/* User Info */}
       <div className="flex items-center gap-3">
-        <img
+        {/* <img
           src={review.photo}
           alt={review.user}
           className="w-12 h-12 rounded-full object-cover"
-        />
+        /> */}
+
+<Image
+ width={54}
+ height={56}
+  src={review.photo} 
+  alt="user" 
+  className="w-14 h-14 rounded-full object-cover border"/>
 
         <div>
           <h3 className="font-semibold text-gray-800">{review.user}</h3>

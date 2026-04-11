@@ -1,6 +1,8 @@
 import FoodCardSkeleton from '@/components/skeletons/FoodCardSkeleton ';
 import ReviewSkeleton from '@/components/skeletons/ReviewSkeleton';
+import { Hind_Siliguri } from 'next/font/google';
 import React from 'react';
+
 
 const ReviewLoading = () => {
     return (

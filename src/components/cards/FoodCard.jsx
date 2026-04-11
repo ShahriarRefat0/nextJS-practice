@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import CardButton from "../buttons/CardButton";
+import Image from "next/image";
 
 const FoodCard = ({ food }) => {
   return (
@@ -9,10 +10,17 @@ const FoodCard = ({ food }) => {
       
     
       {/* Image */}
-      <img
+      {/* <img
         src={food.foodImg}
         alt={food.title}
         className="w-full h-48 object-cover"
+      /> */}
+
+      <Image src={food.foodImg}
+      alt={food.title}
+      className="w-full h-44 object-cover rounded-lg"
+      width={300}
+      height={150}
       />
 
       {/* Content */}

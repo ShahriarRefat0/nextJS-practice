@@ -2,7 +2,11 @@
 import ReviewCard from '@/components/cards/ReviewCard';
 import React, { useEffect, useState } from 'react';
 import ReviewLoading from './ReviewLoading';
+import { Hind_Siliguri } from 'next/font/google';
 
+const shili = Hind_Siliguri({
+    weight:["400"]
+})
 const ReviewsPage = () => {
     const [reviews, setReviews] = useState([])
     const [loading, setLoading] = useState(true) 
@@ -21,7 +25,7 @@ if (loading) {
 }
 
     return (
-        <div>
+        <div className={`${shili.className}`}  >
             <h2 className='text-4xl'>Total {reviews.length} Founds</h2> 
         <div className='grid grid-cols-3 gap-5'>
             {
